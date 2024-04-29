@@ -16,7 +16,7 @@ lottieContainer.style.cssText = `
 document.body.appendChild(lottieContainer);
 
 function hideOverlay() {
-    lottieContainer.style.display = 'block';
+    lottieContainer.style.display = 'none';
     // Substitua pela URL direta do seu arquivo JSON do Lottie.
     lottie.loadAnimation({
         container: lottieContainer,
@@ -27,8 +27,12 @@ function hideOverlay() {
     });
 }
 
+function hideLoader() {
+    lottieContainer.style.display = 'none';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     hideOverlay(); // Teste sem o setTimeout
 });
 
-window.addEventListener('load', hideOverlay);
+window.addEventListener('load', hideLoader);
