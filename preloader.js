@@ -43,5 +43,5 @@ document.addEventListener('DOMContentLoaded', showLoader);
 
 window.addEventListener('load', () => {
     // Esperando 1 segundo antes de ocultar o cachorrinho
-    setTimeout(hideLoader, 1000);
+    setTimeout(hideLoader, 2000);
 });
