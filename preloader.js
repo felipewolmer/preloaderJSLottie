@@ -11,13 +11,16 @@ lottieContainer.style.cssText = `
     align-items: center;
     background-color: rgba(255, 255, 255, 0.7);
     z-index: 999;
+    transition: opacity 0.5s ease; /* Adicionando a transição */
+    opacity: 1; /* Garantindo que o elemento seja visível inicialmente */
 `;
 
 document.body.appendChild(lottieContainer);
 
 function showLoader() {
-    lottieContainer.style.display = 'flex';
-    // Substitua pela URL direta do seu arquivo JSON do Lottie.
+    // Exibindo o cachorrinho
+    lottieContainer.style.opacity = 1;
+    // Carregando a animação
     lottie.loadAnimation({
         container: lottieContainer,
         renderer: 'svg', // ou 'canvas' se preferir
@@ -28,11 +31,14 @@ function showLoader() {
 }
 
 function hideLoader() {
-    lottieContainer.style.display = 'none';
+    // Suavizando o efeito antes de ocultar
+    lottieContainer.style.opacity = 0;
+    // Ocultando completamente após o término da transição
+    setTimeout(() => {
+        lottieContainer.style.display = 'none';
+    }, 500); // Tempo da transição em milissegundos
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    hideOverlay(); // Teste sem o setTimeout
-});
+document.addEventListener('DOMContentLoaded', showLoader);
 
 window.addEventListener('load', hideLoader);
