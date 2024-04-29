@@ -31,6 +31,8 @@ function hideLoader() {
     lottieContainer.style.display = 'none';
 }
 
-document.addEventListener('DOMContentLoaded', showLoader);
+document.addEventListener('DOMContentLoaded', () => {
+    hideOverlay(); // Teste sem o setTimeout
+});
 
 window.addEventListener('load', hideLoader);
