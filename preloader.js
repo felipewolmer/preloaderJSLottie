@@ -14,7 +14,7 @@ overlay.style.cssText = `
 `;
 
 const image = document.createElement('img');
-image.src = 'https://jvsc99.github.io/preloaderJSLottie/JVGIsylS3F-3.json'; // Substitua pela URL direta da sua imagem ou arquivo JSON do Lottie.
+image.src = 'https://felipewolmer.github.io/preloaderJSLottie/JVGIsylS3F-3.json'; // Substitua pela URL direta da sua imagem ou arquivo JSON do Lottie.
 image.style.cssText = `
     width: 200px; /* ou ajuste para o tamanho desejado */
     height: 200px; /* ou ajuste para o tamanho desejado */
