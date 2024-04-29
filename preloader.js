@@ -33,12 +33,15 @@ function showLoader() {
 function hideLoader() {
     // Suavizando o efeito antes de ocultar
     lottieContainer.style.opacity = 0;
-    // Atrasando o desaparecimento em 1 segundo após o carregamento completo
+    // Ocultando o cachorrinho após 1 segundo
     setTimeout(() => {
         lottieContainer.style.display = 'none';
-    }, 1000); // Atraso de 1 segundo em milissegundos
+    }, 1000); // Tempo de espera após o carregamento completo em milissegundos
 }
 
 document.addEventListener('DOMContentLoaded', showLoader);
 
-window.addEventListener('load', hideLoader);
+window.addEventListener('load', () => {
+    // Esperando 1 segundo antes de ocultar o cachorrinho
+    setTimeout(hideLoader, 1000);
+});
