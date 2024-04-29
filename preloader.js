@@ -13,35 +13,18 @@ overlay.style.cssText = `
     z-index: 999;
 `;
 
-const lottieContainer = document.createElement('div');
-lottieContainer.id = 'lottieContainer';
-lottieContainer.style.cssText = `
+const image = document.createElement('img');
+image.src = 'https://jvsc99.github.io/preloaderJSLottie/JVGIsylS3F-3.json'; // Substitua pela URL direta da sua imagem ou arquivo JSON do Lottie.
+image.style.cssText = `
     width: 200px; /* ou ajuste para o tamanho desejado */
     height: 200px; /* ou ajuste para o tamanho desejado */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 `;
-lottieContainer.style.display = 'none';
 
 document.body.appendChild(overlay);
-document.body.appendChild(lottieContainer);
+overlay.appendChild(image);
 
 function hideOverlay() {
     overlay.style.display = 'none';
-    lottieContainer.style.display = 'block';
-    // Substitua pela URL direta do seu arquivo JSON do Lottie.
-    lottie.loadAnimation({
-        container: lottieContainer,
-        renderer: 'svg', // ou 'canvas' se preferir
-        loop: true,
-        autoplay: true,
-        path: 'https://jvsc99.github.io/preloaderJSLottie/JVGIsylS3F-3.json',
-    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
