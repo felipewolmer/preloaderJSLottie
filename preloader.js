@@ -14,10 +14,10 @@ overlay.style.cssText = `
 `;
 
 const image = document.createElement('img');
-image.src = 'https://felipewolmer.github.io/preloaderJSLottie/Animation.gif'; // Substitua pela URL direta da sua imagem ou arquivo JSON do Lottie.
+image.src = 'https://felipewolmer.github.io/preloaderJSLottie/Animation.gif'; // Substitua pela URL direta da sua imagem GIF.
 image.style.cssText = `
-    width: 200px; /* ou ajuste para o tamanho desejado */
-    height: 200px; /* ou ajuste para o tamanho desejado */
+    width: 150px;
+    height: 150px;
 `;
 
 document.body.appendChild(overlay);
@@ -28,7 +28,7 @@ function hideOverlay() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    hideOverlay(); // Teste sem o setTimeout
+    hideOverlay();
 });
 
 window.addEventListener('load', hideOverlay);
