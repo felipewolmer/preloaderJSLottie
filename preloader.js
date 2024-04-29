@@ -33,10 +33,10 @@ function showLoader() {
 function hideLoader() {
     // Suavizando o efeito antes de ocultar
     lottieContainer.style.opacity = 0;
-    // Ocultando completamente após o término da transição
+    // Atrasando o desaparecimento em 1 segundo após o carregamento completo
     setTimeout(() => {
         lottieContainer.style.display = 'none';
-    }, 500); // Tempo da transição em milissegundos
+    }, 1000); // Atraso de 1 segundo em milissegundos
 }
 
 document.addEventListener('DOMContentLoaded', showLoader);
