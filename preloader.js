@@ -2,10 +2,11 @@ const lottieContainer = document.createElement('div');
 lottieContainer.id = 'lottieContainer';
 lottieContainer.style.cssText = `
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Definindo a largura como 50% */
+    height: 50%; /* Definindo a altura como 50% */
     display: flex;
     justify-content: center;
     align-items: center;
