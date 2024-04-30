@@ -5,12 +5,11 @@ lottieContainer.style.cssText = `
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 96px;
-    height: 96px;
+    width: 128px;
+    height: 128px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.3);
     z-index: 999;
     transition: opacity 0.5s ease; /* Adicionando a transição */
     opacity: 1; /* Garantindo que o elemento seja visível inicialmente */
