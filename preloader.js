@@ -10,7 +10,7 @@ lottieContainer.style.cssText = `
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(238, 139, 96, 1);
+    background-color: rgba(238, 139, 96, 0.7);
     z-index: 999;
     transition: opacity 0.5s ease; /* Adicionando a transição */
     opacity: 1; /* Garantindo que o elemento seja visível inicialmente */
