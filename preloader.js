@@ -15,6 +15,16 @@ lottieContainer.style.cssText = `
     opacity: 1; /* Garantindo que o elemento seja visível inicialmente */
 `;
 
+const loadingText = document.createElement('div');
+loadingText.textContent = 'Carregando... 0%';
+loadingText.style.cssText = `
+    position: absolute;
+    bottom: 10px;
+    font-size: 18px;
+`;
+
+lottieContainer.appendChild(loadingText);
+
 document.body.appendChild(lottieContainer);
 
 function showLoader() {
@@ -27,6 +37,8 @@ function showLoader() {
         loop: true,
         autoplay: true,
         path: 'https://felipewolmer.github.io/preloaderJSLottie/dog.json',
+        // Atualizando o texto com a porcentagem de carregamento
+        data: { onEnterFrame: () => loadingText.textContent = `Carregando... ${Math.floor((lottieContainer.animation.currentFrame / lottieContainer.animation.totalFrames) * 100)}%` }
     });
 }
 
@@ -43,5 +55,5 @@ document.addEventListener('DOMContentLoaded', showLoader);
 
 window.addEventListener('load', () => {
     // Esperando 1 segundo antes de ocultar o cachorrinho
-    setTimeout(hideLoader, 2000);
+    setTimeout(hideLoader, 1000);
 });
